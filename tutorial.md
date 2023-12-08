@@ -49,4 +49,15 @@
 npm init // para criar o arquivo package.json
 npm install express // para instalar o pacote express localmente
 npm install -g nodemon // para instalar o pacote nodemon globalmente
+npm install // para instalar todas as dependências do projeto localmente
 ```
+
+## Alguns módulos externos importantes
+
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+
+Framework para desenvolvimento de aplicações web e API's Rest (semelhante ao FastAPI do python)
+
+![Nodemon](https://img.shields.io/badge/nodemon-%23404d59.svg?style=for-the-badge&logo=nodemon&logoColor=%2361DAFB)
+
+Monitora as alterações no código e reinicia o servidor automaticamente
