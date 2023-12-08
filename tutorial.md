@@ -42,6 +42,7 @@
 - Para instalar todas as dependências de um projeto, basta executar o comando `npm install`
 - Todos os pacotes instalados ficam armazenados na pasta `node_modules`
 - Um arquivo chamado `package.json` é criado para armazenar as informações do projeto e as dependências instaladas. (como o arquivo `requirements.txt` do python)
+- Porém, além de conter as informações do projeto, o arquivo `package.json` também contém scripts que podemos configurar e executar através do comando: `npm run nome_do_script`
 - Para inicializar um projeto node.js basta executar os comandos:
 
 ```bash
