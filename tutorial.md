@@ -61,3 +61,7 @@ Framework para desenvolvimento de aplicações web e API's Rest (semelhante ao F
 ![Nodemon](https://img.shields.io/badge/nodemon-%23404d59.svg?style=for-the-badge&logo=nodemon&logoColor=%2361DAFB)
 
 Monitora as alterações no código e reinicia o servidor automaticamente
+
+![Mongoose](https://img.shields.io/badge/mongoose-%23404d59.svg?style=for-the-badge&logo=mongoose&logoColor=%2361DAFB)
+
+Biblioteca para modelagem de dados do MongoDB
