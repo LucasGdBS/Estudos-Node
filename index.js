@@ -8,6 +8,8 @@ dotenv.config();
 // Define o app como uma instância do express (feito no fastAPI)
 const app = express();
 
+// Esses .use são middlewares do express, que são funções que são executadas antes de qualquer requisição
+
 // Define que o app vai usar o formato json
 app.use(express.json());
 
