@@ -304,3 +304,143 @@ nomes.forEach((nome, index) => {
   console.log(`${index}: ${nome}`);
 }); // 0: Felipe 1: João 2: Julia 3: 10 4: true
 ```
+
+## Condicionais
+
+> Igual à C, C++, Java, etc.
+
+### Comparadores
+
+- `==`: Igual
+  - Verifica apenas se o valor é igual, não verifica o tipo.
+- `===`: Estritamente igual
+  - Verifica se o valor e o tipo são iguais.
+
+### Operador ternário
+
+> Igual à C, C++, Java, etc.
+
+```js
+const idade = 21;
+const maiorIdade = idade >= 18 ? 'Maior de idade' : 'Menor de idade';
+console.log(maiorIdade); // Maior de idade
+```
+
+## Funções
+
+Existe duas formas de declarar uma função:
+
+- `function`
+
+```js
+function soma(a, b) {
+  return a + b;
+}
+```
+
+- `arrow function`
+
+```js
+const soma = (a, b) => {
+  return a + b;
+}
+```
+
+E quando a função tem apenas uma linha, podemos omitir o `return` e as chaves.
+
+```js
+const soma = (a, b) => a + b;
+```
+
+As 2 formas de declarar uma função são iguais, porém a arrow function é mais performática e mais curta.
+
+Das duas formas, a função é chamada da mesma forma.
+
+```js
+const resultado = soma(10, 20);
+console.log(resultado); // 30
+```
+
+## Classes
+
+> É basicamente igual à Java.
+
+### Criando e estanciando uma classe
+
+Classes são uma forma de criar padrões para objetos.
+
+Assim como em outras linguagens, também precisamos definir dentro da classe um método construtor, que é o método que vai ser chamado quando a classe for instanciada.
+
+```js
+class Pessoa {
+  constructor(nome, idade) {
+    this.nome = nome;
+    this.idade = idade;
+  }
+
+  falar() {
+    console.log(`Meu nome é ${this.nome}`);
+  }
+}
+```
+
+```js
+const pessoa = new Pessoa('Lucas', 21);
+pessoa.falar(); // Meu nome é Lucas
+```
+
+Dentro de uma classe também podemos definir métodos estáticos, que são métodos que não precisam de uma instância da classe para serem chamados.
+
+```js
+class Pessoa {
+  constructor(nome, idade) {
+    this.nome = nome;
+    this.idade = idade;
+  }
+
+  falar() {
+    console.log(`Meu nome é ${this.nome}`);
+  }
+
+  static andar() {
+    console.log('Andando...');
+  }
+}
+```
+
+Agora podemos chamar o método `andar()` sem precisar instanciar a classe.
+
+```js
+Pessoa.andar(); // Andando...
+```
+
+### Herança
+
+Para herdar uma classe, usamos a palavra reservada `extends`.
+
+```js
+// Criando a classe Animal
+class Animal {
+  constructor(nome) {
+    this.nome = nome;
+  }
+  
+  falar() {
+    console.log(`${this.nome} está falando...`);
+  }
+}
+
+// Criando a classe Cachorro que herda de Animal
+class Cachorro extends Animal {
+  constructor(nome, raca) {
+    // Chamando o construtor da super classe
+    super(nome);
+    this.raca = raca;
+  }
+
+  // Sobrescrevendo o método falar
+  falar() {
+    console.log(`${this.nome} está latindo...`);
+  }
+}
+```
