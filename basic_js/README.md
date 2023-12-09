@@ -188,3 +188,119 @@ const { nome, idade } = pessoa;
 console.log(nome); // Lucas
 console.log(idade); // 21
 ```
+
+## 📄 Json
+
+JSON significa JavaScript Object Notation. É um formato de troca de dados entre sistemas e programas muito leve e de fácil utilização.
+
+Normalmente é utilizado para troca de dados entre o front-end e o back-end.
+
+Vamos considerar o objeto pessoa que criamos anteriormente.
+
+Para transformar esse objeto em um JSON, podemos usar o método `JSON.stringify()`. Esse método recebe um objeto e retorna uma string JSON.
+
+```js
+const JsonPessoa = JSON.stringify(pessoa);
+```
+
+Para transformar um JSON em um objeto, podemos usar o método `JSON.parse()`. Esse método recebe uma string JSON e retorna um objeto.
+
+```js
+const objetoPessoa = JSON.parse(JsonPessoa);
+```
+
+## Loops
+
+### For
+
+O loop `for` é o mais comum de todos. Ele executa um bloco de código um número específico de vezes.
+
+```js
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
+```
+
+### While
+
+O loop `while` executa um bloco de código enquanto uma condição especificada for verdadeira.
+
+```js
+let i = 0;
+while (i < 10) {
+  console.log(i);
+  i++;
+}
+```
+
+### Do While
+
+O loop `do while` executa um bloco de código uma vez e depois verifica se a condição é verdadeira, então repete o loop enquanto a condição for verdadeira.
+
+```js
+let i = 0;
+do {
+  console.log(i);
+  i++;
+} while (i < 10);
+```
+
+### For of
+
+> Usado para qualquer estrutura iterável
+
+O loop `for of` percorre objetos iterativos (incluindo Array, Map, Set, o objeto arguments e assim por diante), chamando uma função personalizada com instruções a serem executadas para o valor de cada objeto distinto.
+
+```js
+const nomes = ['Felipe', 'João', 'Julia', 10, true];
+for (let nome of nomes) {
+  console.log(nome);
+}
+// Felipe João Julia 10 true
+```
+
+### For in
+
+> Usado para objetos. Contudo, o For In não é muito performático. Ou seja, ele é mais lento que as outras formas de loop.
+
+O loop `for in` percorre as propriedades de um objeto, na ordem original de inserção. Para cada propriedade distinta, o JavaScript executa as instruções especificadas em uma função personalizada.
+
+```js
+const pessoa = {
+  nome: 'Lucas',
+  idade: 21,
+  cidade: 'Recife',
+  dog: {
+    nome: 'Poppy',
+    idade: 6,
+  }
+};
+for (let propriedade in pessoa) {
+  console.log(propriedade);
+}
+// nome idade cidade dog
+```
+
+### For each
+
+> Usado para arrays
+
+O loop `for each` percorre os elementos de um array, na ordem original de inserção. Para cada elemento distinto, o JavaScript executa as instruções especificadas em uma função personalizada.
+
+```js
+const nomes = ['Felipe', 'João', 'Julia', 10, true];
+nomes.forEach((nome) => {
+  console.log(nome);
+}); // Felipe João Julia 10 true
+```
+
+No entanto, o `forEach` não pode ser interrompido usando o `break` ou `return`.
+
+Além disso, o `forEach` tem a vantagem de poder pegar o índice do elemento.
+
+```js
+const nomes = ['Felipe', 'João', 'Julia', 10, true];
+nomes.forEach((nome, index) => {
+  console.log(`${index}: ${nome}`);
+}); // 0: Felipe 1: João 2: Julia 3: 10 4: true
+```
